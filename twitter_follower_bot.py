@@ -22,6 +22,7 @@ while True:
 	for user in followers_list:
 		api.create_friendship(user.id)
 		followed.append(user.id)
+		time.sleep(random.randint(1, 2))
 
 	time.sleep(4800) # 80 min
 
@@ -30,5 +31,6 @@ while True:
 
 		if is_following != 1:
 			api.destroy_friendship(user)
+			time.sleep(random.randint(1, 2))
 
 	time.sleep(random.randint(15, 30)) # Small delay
